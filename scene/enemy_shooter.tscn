@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cfqxyi58c8ueb"]
+[gd_scene load_steps=7 format=3 uid="uid://cc0ke0c2k8j0"]
 
-[ext_resource type="Script" uid="uid://cnfk8jiiw2xoe" path="res://scipt/enemy.gd" id="1_h08p8"]
+[ext_resource type="Script" uid="uid://dqw1bynkpblh" path="res://scipt/enemy_shooter.gd" id="1_l5hv4"]
+[ext_resource type="PackedScene" uid="uid://qlqe74lpj0fq" path="res://scene/enemy_bullet.tscn" id="2_p3053"]
 
 [sub_resource type="Gradient" id="Gradient_vufel"]
 offsets = PackedFloat32Array(0)
-colors = PackedColorArray(1, 0, 0, 1)
+colors = PackedColorArray(1, 0.5803922, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_h08p8"]
 gradient = SubResource("Gradient_vufel")
@@ -19,7 +20,8 @@ size = Vector2(16, 16)
 
 [node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
 collision_mask = 2
-script = ExtResource("1_h08p8")
+script = ExtResource("1_l5hv4")
+bullet_scene = ExtResource("2_p3053")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("GradientTexture2D_h08p8")

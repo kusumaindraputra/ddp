@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://f8u30if2q480"]
+[gd_scene load_steps=6 format=3 uid="uid://f8u30if2q480"]
 
 [ext_resource type="PackedScene" uid="uid://c0747h4gg1jc6" path="res://scene/player.tscn" id="1_itxqv"]
 [ext_resource type="Script" uid="uid://v8jcrtdxy8y8" path="res://scipt/spawner.gd" id="2_wp4xf"]
 [ext_resource type="PackedScene" uid="uid://cfqxyi58c8ueb" path="res://scene/enemy.tscn" id="3_brvut"]
+[ext_resource type="PackedScene" uid="uid://d0sfwrndknyys" path="res://scene/enemy_zigzag.tscn" id="4_brvut"]
+[ext_resource type="PackedScene" uid="uid://cc0ke0c2k8j0" path="res://scene/enemy_shooter.tscn" id="5_0ha60"]
 
 [node name="Main" type="Node2D"]
 
@@ -11,4 +13,6 @@ position = Vector2(259, 247)
 
 [node name="Spawner" type="Node2D" parent="."]
 script = ExtResource("2_wp4xf")
-enemy_scene = ExtResource("3_brvut")
+enemy_basic_scene = ExtResource("3_brvut")
+enemy_zigzag_scene = ExtResource("4_brvut")
+enemy_shooter_scene = ExtResource("5_0ha60")
