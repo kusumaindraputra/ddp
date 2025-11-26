@@ -11,6 +11,7 @@ func _physics_process(delta):
 
 func _on_area_entered(area):
 	if area.is_in_group("player"):
-		if area.has_method("take_damage"):
-			area.take_damage(1)
+		var player_parent = area.get_parent()  # player_parent adalah parent dari HurtBox
+		if player_parent.has_method("take_damage"):
+			player_parent.take_damage(1)
 		queue_free()

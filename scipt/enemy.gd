@@ -30,7 +30,7 @@ func _process(delta):
 
 func _on_hit_box_area_entered(area: Area2D) -> void:
 	if area.is_in_group("player"):
-		var player = area.get_parent()  # Player adalah parent dari HurtBox
-		if player.has_method("take_damage"):
-			player.take_damage(1)
+		var player_parent = area.get_parent()  # Player adalah parent dari HurtBox
+		if player_parent.has_method("take_damage"):
+			player_parent.take_damage(1)
 		queue_free()
