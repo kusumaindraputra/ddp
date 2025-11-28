@@ -19,10 +19,10 @@ func spawn_enemy() -> void:
 	var pick = randi() % 3
 	var enemy
 	if pick == 0:
-		enemy = enemy_basic_scene.instantiate()
+		enemy = enemy_shooter_scene.instantiate()
 	elif pick == 1:
-		enemy = enemy_zigzag_scene.instantiate()
+		enemy = enemy_shooter_scene.instantiate()
 	else: 
 		enemy = enemy_shooter_scene.instantiate()
-	enemy.position = Vector2(randf_range(50, 430), -50)
+	enemy.position = Vector2(randf_range(200, 200), -50)
 	add_child.call_deferred(enemy)

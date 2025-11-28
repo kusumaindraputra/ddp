@@ -14,7 +14,7 @@ height = 16
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xw300"]
 size = Vector2(8, 16)
 
-[node name="Enemy Bullet" type="Area2D"]
+[node name="EnemyBullet" type="Area2D"]
 collision_layer = 8
 script = ExtResource("1_urhpb")
 
