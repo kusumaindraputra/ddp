@@ -24,5 +24,5 @@ func spawn_enemy() -> void:
 		enemy = enemy_zigzag_scene.instantiate()
 	else: 
 		enemy = enemy_shooter_scene.instantiate()
-	enemy.position = Vector2(randf_range(50, 430), -50)
+	enemy.position = Vector2(randf_range(200, 200), -50)
 	add_child.call_deferred(enemy)

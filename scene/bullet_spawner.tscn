@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://71jltbo3yrgi"]
+
+[ext_resource type="Script" uid="uid://d2ajs787r7dkx" path="res://scipt/bullet_pattern.gd" id="1_wg23b"]
+[ext_resource type="PackedScene" uid="uid://qlqe74lpj0fq" path="res://scene/enemy_bullet.tscn" id="2_dbipj"]
+
+[node name="BulletSpawner" type="Node2D"]
+script = ExtResource("1_wg23b")
+bullet_scene = ExtResource("2_dbipj")
