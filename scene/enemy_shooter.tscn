@@ -21,6 +21,7 @@ size = Vector2(16, 16)
 [node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
 collision_mask = 2
 script = ExtResource("1_l5hv4")
+bullet_spawner_scene = ExtResource("2_p3053")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("GradientTexture2D_h08p8")

@@ -13,3 +13,18 @@ func _ready() -> void:
 		sp.position = Vector2(0, 10)  # offset under enemy
 		# configure pattern by exported variables on sp (inspector)
 		# e.g., sp.pattern_type = "spiral"
+
+func _physics_process(delta):
+	velocity = Vector2(0, 1) * speed
+	move_and_slide()
+
+	# auto delete jika keluar layar
+	if position.y > 1300:
+		queue_free()
+func take_damage(amount: int):
+	hp -= amount
+	if hp <= 0:
+		die()
+
+func die():
+	queue_free()

@@ -19,9 +19,9 @@ func spawn_enemy() -> void:
 	var pick = randi() % 3
 	var enemy
 	if pick == 0:
-		enemy = enemy_shooter_scene.instantiate()
+		enemy = enemy_basic_scene.instantiate()
 	elif pick == 1:
-		enemy = enemy_shooter_scene.instantiate()
+		enemy = enemy_zigzag_scene.instantiate()
 	else: 
 		enemy = enemy_shooter_scene.instantiate()
 	enemy.position = Vector2(randf_range(200, 200), -50)
